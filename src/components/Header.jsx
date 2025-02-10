@@ -15,7 +15,10 @@ export default function Header() {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/sign">
-              Sign/Register
+              User Sign
+            </Nav.Link>
+            <Nav.Link as={Link} to="/member-reg">
+              Member Registration
             </Nav.Link>
           </Nav>
         </Container>
