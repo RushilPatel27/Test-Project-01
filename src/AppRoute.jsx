@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
+import Register from "./pages/Register";
 
 export default function AppRoute() {
   return (
@@ -9,6 +10,7 @@ export default function AppRoute() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
