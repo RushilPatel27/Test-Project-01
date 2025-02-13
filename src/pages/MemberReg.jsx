@@ -7,6 +7,7 @@ import {
   Form,
   Row,
   Modal,
+  Table,
 } from "react-bootstrap";
 import { Link } from "react-router";
 
@@ -45,7 +46,7 @@ export default function MemberReg() {
 
     setMemberData({
       ...memberData,
-      [name]: [value],
+      [name]: value,
     });
   };
 
@@ -357,19 +358,116 @@ export default function MemberReg() {
                           Submit Now
                         </Button>
 
-                        <Modal show={show} onHide={handleClose}>
+                        <Modal
+                          show={show}
+                          onHide={handleClose}
+                          backdrop="static"
+                          keyboard={false}
+                          size="lg"
+                        >
                           <Modal.Header closeButton>
-                            <Modal.Title>Modal heading</Modal.Title>
+                            <Modal.Title className="h5 fw-semibold">
+                              Member Registration Details
+                            </Modal.Title>
                           </Modal.Header>
                           <Modal.Body>
-                            Woohoo, you are reading this text in a modal!
+                            <Table bordered>
+                              <thead>
+                                <tr>
+                                  <th>Form Field</th>
+                                  <th>Member Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>First Name</td>
+                                  <td>{memberData.fname}</td>
+                                </tr>
+                                <tr>
+                                  <td>Middel Name</td>
+                                  <td>{memberData.mname}</td>
+                                </tr>
+                                <tr>
+                                  <td>Last Name</td>
+                                  <td>{memberData.lname}</td>
+                                </tr>
+                                <tr>
+                                  <td>Email Address</td>
+                                  <td>{memberData.email}</td>
+                                </tr>
+                                <tr>
+                                  <td>Phone Number</td>
+                                  <td>{memberData.phone}</td>
+                                </tr>
+                                <tr>
+                                  <td>Password</td>
+                                  <td>{memberData.password}</td>
+                                </tr>
+                                <tr>
+                                  <td>Confirm Password</td>
+                                  <td>{memberData.cpassword}</td>
+                                </tr>
+                                <tr>
+                                  <td>Gender</td>
+                                  <td>{memberData.genderGroup}</td>
+                                </tr>
+                                <tr>
+                                  <td>Upload Profile Photo</td>
+                                  <td>
+                                    {memberData.uprofile
+                                      ? memberData.uprofile.name
+                                      : "No file uploaded"}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Upload Company Profile</td>
+                                  <td>
+                                    {memberData.cprofile
+                                      ? memberData.cprofile.name
+                                      : "No file uploaded"}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Blood Group</td>
+                                  <td>{memberData.blood}</td>
+                                </tr>
+                                <tr>
+                                  <td>Date of Birth</td>
+                                  <td>{memberData.bdate}</td>
+                                </tr>
+                                <tr>
+                                  <td>Birth Time</td>
+                                  <td>{memberData.btime}</td>
+                                </tr>
+                                <tr>
+                                  <td>City</td>
+                                  <td>{memberData.city}</td>
+                                </tr>
+                                <tr>
+                                  <td>State</td>
+                                  <td>{memberData.state}</td>
+                                </tr>
+                                <tr>
+                                  <td>Zip Code</td>
+                                  <td>{memberData.zipcode}</td>
+                                </tr>
+                                <tr>
+                                  <td>Address</td>
+                                  <td>{memberData.address}</td>
+                                </tr>
+                                <tr>
+                                  <td>Agree to the Privacy Policy</td>
+                                  <td>{memberData.pc ? "Yes" : "No"}</td>
+                                </tr>
+                              </tbody>
+                            </Table>
                           </Modal.Body>
-                          <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
+                          <Modal.Footer className="justify-content-center">
+                            <Button variant="danger" onClick={handleClose}>
                               Close
                             </Button>
-                            <Button variant="primary" onClick={handleClose}>
-                              Save Changes
+                            <Button variant="success" onClick={handleClose}>
+                              Confirm Details
                             </Button>
                           </Modal.Footer>
                         </Modal>
