@@ -14,11 +14,14 @@ export default function Header() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/sign">
-              User Sign
+            <Nav.Link as={Link} to="/product-list">
+              Our Product
             </Nav.Link>
             <Nav.Link as={Link} to="/member-reg">
               Member Registration
+            </Nav.Link>
+            <Nav.Link as={Link} to="/sign">
+              User Sign
             </Nav.Link>
           </Nav>
         </Container>
