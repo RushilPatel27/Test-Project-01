@@ -66,7 +66,7 @@ export default function MemberReg() {
       <Container className="py-5">
         <Row className="justify-content-center">
           <Col lg={10}>
-            <Card className="mb-5">
+            <Card className="mb-0">
               <Card.Header className="text-center">
                 Member Registration
               </Card.Header>

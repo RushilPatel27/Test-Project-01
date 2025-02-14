@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Home() {
-  return <div>Page Content Here</div>;
+  return <div style={{ height: "80vh" }}>Page Content Here</div>;
 }

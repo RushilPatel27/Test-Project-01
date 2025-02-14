@@ -20,7 +20,7 @@ export default function SignIn() {
 
   return (
     <>
-      <Container className="my-5">
+      <Container className="my-5" style={{ height: "70vh" }}>
         <Row className="justify-content-center">
           <Col lg={5}>
             <Card>
