@@ -1,5 +1,48 @@
 .product-list-section {
   .fiter-part {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    .accordion-button {
+      justify-content: space-between;
+      span {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .btn-size {
+      display: inline-block;
+      position: relative;
+      border: 1px solid rgb(221 221 221);
+      border-radius: 4px;
+      background: rgb(255 255 255);
+      color: rgb(26 26 26);
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      min-width: 44px;
+      padding: 4px 12px;
+      margin: 4px;
+    }
+
+    .btn-color {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgb(255 255 255);
+      border-radius: 4px;
+      background-size: cover;
+      background-position: center;
+      -webkit-tap-highlight-color: transparent;
+    }
   }
 
   .price-shorting {
