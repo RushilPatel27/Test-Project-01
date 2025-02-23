@@ -17,6 +17,9 @@ export default function Header() {
             <Nav.Link as={Link} to="/product-list">
               Our Product
             </Nav.Link>
+            <Nav.Link as={Link} to="/blogs">
+              Blogs
+            </Nav.Link>
             <Nav.Link as={Link} to="/member-reg">
               Member Registration
             </Nav.Link>

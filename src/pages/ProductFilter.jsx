@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Accordion, Form } from "react-bootstrap";
 import { CRangeSlider } from "@coreui/react-pro";
+import JsonProductFilter from "./data/ProductFilter.json";
 
 export default function ProductFilter() {
   const [activeKey, setActiveKey] = useState("0");
@@ -11,177 +12,177 @@ export default function ProductFilter() {
 
   // console.log(sizeClothes);
 
-  const sizeClothes = [
-    {
-      id: 1,
-      title: "30 Inch",
-    },
-    {
-      id: 2,
-      title: "32 Inch",
-    },
-    {
-      id: 3,
-      title: "34 Inch",
-    },
-    {
-      id: 5,
-      title: "36 Inch",
-    },
-    {
-      id: 6,
-      title: "38 Inch",
-    },
-    {
-      id: 7,
-      title: "40 Inch",
-    },
-  ];
+  // const sizeClothes = [
+  //   {
+  //     id: 1,
+  //     title: "30 Inch",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "32 Inch",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "34 Inch",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "36 Inch",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "38 Inch",
+  //   },
+  //   {
+  //     id: 7,
+  //     title: "40 Inch",
+  //   },
+  // ];
 
-  const colorClothes = [
-    {
-      id: 1,
-      title: "#e66363",
-    },
-    {
-      id: 2,
-      title: "#8c8ce8",
-    },
+  // const colorClothes = [
+  //   {
+  //     id: 1,
+  //     title: "#e66363",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "#8c8ce8",
+  //   },
 
-    {
-      id: 3,
-      title: "#2dd02d",
-    },
-    {
-      id: 4,
-      title: "#e1e13c",
-    },
+  //   {
+  //     id: 3,
+  //     title: "#2dd02d",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "#e1e13c",
+  //   },
 
-    {
-      id: 5,
-      title: "#f5f5dc",
-    },
-    {
-      id: 6,
-      title: "#AA8C77",
-    },
-  ];
+  //   {
+  //     id: 5,
+  //     title: "#f5f5dc",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "#AA8C77",
+  //   },
+  // ];
 
-  const fabricClothes = [
-    {
-      id: 1,
-      title: "100% Cotton",
-    },
-    {
-      id: 2,
-      title: "100% Linen",
-    },
+  // const fabricClothes = [
+  //   {
+  //     id: 1,
+  //     title: "100% Cotton",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "100% Linen",
+  //   },
 
-    {
-      id: 3,
-      title: "Cotton",
-    },
-    {
-      id: 4,
-      title: "Cotton Blend",
-    },
+  //   {
+  //     id: 3,
+  //     title: "Cotton",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Cotton Blend",
+  //   },
 
-    {
-      id: 5,
-      title: "Cotton Lycra",
-    },
-    {
-      id: 6,
-      title: "Denim",
-    },
-  ];
+  //   {
+  //     id: 5,
+  //     title: "Cotton Lycra",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Denim",
+  //   },
+  // ];
 
-  const categoryClothes = [
-    {
-      id: 1,
-      title: "T-Shirts",
-    },
-    {
-      id: 2,
-      title: "Bermudas/Capris",
-    },
+  // const categoryClothes = [
+  //   {
+  //     id: 1,
+  //     title: "T-Shirts",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Bermudas/Capris",
+  //   },
 
-    {
-      id: 3,
-      title: "Blazer",
-    },
-    {
-      id: 4,
-      title: "Caps",
-    },
+  //   {
+  //     id: 3,
+  //     title: "Blazer",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Caps",
+  //   },
 
-    {
-      id: 5,
-      title: "Coat",
-    },
-    {
-      id: 6,
-      title: "Jackets",
-    },
-  ];
+  //   {
+  //     id: 5,
+  //     title: "Coat",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Jackets",
+  //   },
+  // ];
 
-  const brandClothes = [
-    {
-      id: 1,
-      title: "Puma",
-    },
-    {
-      id: 2,
-      title: "Roadstar",
-    },
+  // const brandClothes = [
+  //   {
+  //     id: 1,
+  //     title: "Puma",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Roadstar",
+  //   },
 
-    {
-      id: 3,
-      title: "Levis",
-    },
-    {
-      id: 4,
-      title: "Max",
-    },
+  //   {
+  //     id: 3,
+  //     title: "Levis",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Max",
+  //   },
 
-    {
-      id: 5,
-      title: "Zudio",
-    },
-    {
-      id: 6,
-      title: "US Polo",
-    },
-  ];
+  //   {
+  //     id: 5,
+  //     title: "Zudio",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "US Polo",
+  //   },
+  // ];
 
-  const discountClothes = [
-    {
-      id: 1,
-      title: "10%",
-    },
-    {
-      id: 2,
-      title: "15%",
-    },
+  // const discountClothes = [
+  //   {
+  //     id: 1,
+  //     title: "10%",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "15%",
+  //   },
 
-    {
-      id: 3,
-      title: "30%",
-    },
-    {
-      id: 4,
-      title: "40%",
-    },
+  //   {
+  //     id: 3,
+  //     title: "30%",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "40%",
+  //   },
 
-    {
-      id: 5,
-      title: "45%",
-    },
-    {
-      id: 6,
-      title: "50%",
-    },
-  ];
+  //   {
+  //     id: 5,
+  //     title: "45%",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "50%",
+  //   },
+  // ];
 
   return (
     <>
@@ -220,7 +221,7 @@ export default function ProductFilter() {
               Size <span>{activeKey === "1" ? "-" : "+"} </span>
             </Accordion.Header>
             <Accordion.Body>
-              {sizeClothes.map((index) => (
+              {JsonProductFilter.sizeClothes.map((index) => (
                 <button key={index.id} className="btn-size">
                   {index.title}
                 </button>
@@ -233,14 +234,12 @@ export default function ProductFilter() {
               Color <span>{activeKey === "2" ? "-" : "+"} </span>
             </Accordion.Header>
             <Accordion.Body>
-              {colorClothes.map((index) => (
+              {JsonProductFilter.colorClothes.map((index) => (
                 <button
                   key={index.id}
                   className="btn-color"
                   style={{ backgroundColor: index.title }}
-                >
-                  {/* {index.title} */}
-                </button>
+                ></button>
               ))}
             </Accordion.Body>
           </Accordion.Item>
@@ -251,7 +250,7 @@ export default function ProductFilter() {
             </Accordion.Header>
             <Accordion.Body>
               <Form>
-                {fabricClothes.map((index) => (
+                {JsonProductFilter.fabricClothes.map((index) => (
                   <Form.Group key={index.id}>
                     <Form.Check type="checkbox" label={index.title} />
                   </Form.Group>
@@ -266,7 +265,7 @@ export default function ProductFilter() {
             </Accordion.Header>
             <Accordion.Body>
               <Form>
-                {categoryClothes.map((index) => (
+                {JsonProductFilter.categoryClothes.map((index) => (
                   <Form.Group key={index.id}>
                     <Form.Check type="checkbox" label={index.title} />
                   </Form.Group>
@@ -281,7 +280,7 @@ export default function ProductFilter() {
             </Accordion.Header>
             <Accordion.Body>
               <Form>
-                {brandClothes.map((index) => (
+                {JsonProductFilter.brandClothes.map((index) => (
                   <Form.Group key={index.id}>
                     <Form.Check type="checkbox" label={index.title} />
                   </Form.Group>
@@ -296,7 +295,7 @@ export default function ProductFilter() {
             </Accordion.Header>
             <Accordion.Body>
               <Form>
-                {discountClothes.map((index) => (
+                {JsonProductFilter.discountClothes.map((index) => (
                   <Form.Group key={index.id}>
                     <Form.Check type="checkbox" label={index.title} />
                   </Form.Group>

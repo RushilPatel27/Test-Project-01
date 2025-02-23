@@ -3,8 +3,10 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+
     .accordion-button {
       justify-content: space-between;
+      padding: 10px;
       span {
         font-size: 22px;
         font-weight: 700;
@@ -12,6 +14,12 @@
 
       &::after {
         display: none;
+      }
+
+      &:not(.collapsed) {
+        color: #0f1114;
+        background-color: #f3f4f7;
+        box-shadow: none;
       }
     }
 

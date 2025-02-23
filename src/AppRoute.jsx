@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import MemberReg from "./pages/MemberReg";
 import ProductList from "./pages/ProductList";
 import ProductData from "./pages/data/ProductData";
+import Blogs from "./pages/Blogs";
 
 export default function AppRoute() {
   return (
@@ -16,6 +17,7 @@ export default function AppRoute() {
         <Route path="/register" element={<Register />} />
         <Route path="/member-reg" element={<MemberReg />} />
         <Route path="/product-list" element={<ProductList />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </div>
   );
